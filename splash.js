@@ -30,7 +30,7 @@ mainAnimation.from(".boxes", {
 
 mainAnimation.to("svg",{
   duration: 1,
-  scale: 0.5,
+  scale: 0.25,
   ease: "back.out"
 });
 

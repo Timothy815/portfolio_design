@@ -1,7 +1,11 @@
 body{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
     background-color: black;
 }
 svg{
     visibility: hidden;
-    transform: scale(0.9);
+    transform: scale(0.5);
 }
