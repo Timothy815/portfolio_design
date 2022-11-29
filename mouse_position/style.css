@@ -1,0 +1,19 @@
+.box{
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    font-family: sans-serif;
+    font-size:0.5em;
+    color: white;
+    
+    transition: 0.3s;
+
+}
+
+#b2{
+   left: 80px;
+}

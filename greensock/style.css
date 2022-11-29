@@ -1,0 +1,12 @@
+body{
+	background: gray;
+	height: 200%;
+}
+
+.mainText{
+	padding: 20px;
+	background: white;
+	width:75%;
+	height:300px;
+	overflow: scroll;
+}

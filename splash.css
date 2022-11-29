@@ -1,0 +1,7 @@
+body{
+    background-color: black;
+}
+svg{
+    visibility: hidden;
+    transform: scale(0.9);
+}
