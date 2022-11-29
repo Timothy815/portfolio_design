@@ -1,8 +1,9 @@
 
-
-let mainAnimation = gsap.timeline({repeat:0, repeatDelay:1});
-mainAnimation.set("svg",{visibility:"visible"});
-mainAnimation.from(".boxes", {
+function sceneOne(){
+let tl = gsap.timeline();
+tl.add("begin");
+tl.set("svg",{visibility:"visible"});
+tl.from(".boxes", {
     duration: 2,
     opacity: 0,
     scale: 0.05,
@@ -14,8 +15,13 @@ mainAnimation.from(".boxes", {
       ease:  "power2.in",
       amount: 1.5
     }
-  });
-  mainAnimation.from(".blackboxes", {
+  },"begin");
+  return tl;
+}
+function sceneTwo(){
+  let tl = gsap.timeline();
+  tl.add("middle")
+  tl.from(".blackboxes", {
     duration: 1,
     opacity: 0.0,
     ease: "power1.inOut",
@@ -26,10 +32,22 @@ mainAnimation.from(".boxes", {
       amount: 1.5
     }
     
-  });
+  },"middle");
+  return tl;
+}
 
-mainAnimation.to("svg",{
-  duration: 1,
-  scale: 0.5,
-  ease: "back.out"
-});
+function sceneThree(){
+  let tl = gsap.timeline();
+  tl.add("end");
+  tl.to("svg",{
+   duration: 1,
+    scale: 0.5,
+    ease: "back.out"
+  },"end");
+  return tl;
+}
+
+var master = gsap.timeline();
+master.add(sceneOne())
+      .add(sceneTwo())
+      .add(sceneThree());
