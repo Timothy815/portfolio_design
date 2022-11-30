@@ -1,12 +1,12 @@
 body{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    background-color: black;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(0, 0, 0);
 }
 svg{
     visibility: hidden;
-    width: 200px;
+    width: 500px;
     height: auto;
 }
