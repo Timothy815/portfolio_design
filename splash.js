@@ -42,6 +42,8 @@ function sceneThree(){
   tl.to("svg",{
    duration: 1,
     scale: 0.5,
+    rotationX: 360,
+    rotationY: 360,
     ease: "back.out"
   },"end");
   return tl;
