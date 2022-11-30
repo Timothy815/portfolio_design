@@ -16,6 +16,7 @@ tl.from(".boxes", {
       amount: 1
     }
   },"begin");
+  
   return tl;
 }
 function sceneTwo(){
@@ -33,6 +34,7 @@ function sceneTwo(){
     }
     
   },"middle");
+  tl.timeScale(1.5);
   return tl;
 }
 
