@@ -4,16 +4,16 @@ let tl = gsap.timeline();
 tl.add("begin");
 tl.set("svg",{visibility:"visible"});
 tl.from(".boxes", {
-    duration: 2,
+    duration:3.0,
     opacity: 0,
-    scale: 0.05,
-    y: 40,
-    ease: "power1.inOut",
+    scale: 0.01,
+    y: 500,
+    ease: "power2.in",
     stagger: {
       grid: [7,15],
       from: "center",
-      ease:  "power2.in",
-      amount: 1.5
+      ease:  "back",
+      amount: 1
     }
   },"begin");
   return tl;
@@ -22,7 +22,7 @@ function sceneTwo(){
   let tl = gsap.timeline();
   tl.add("middle")
   tl.from(".blackboxes", {
-    duration: 1,
+    duration: 0.5,
     opacity: 0.0,
     ease: "power1.inOut",
     stagger:{
@@ -37,7 +37,7 @@ function sceneTwo(){
 }
 
 function sceneThree(){
-  let tl = gsap.timeline();
+  let tl = gsap.timeline({yoyo:true, repeat:1, repeatDelay: 2});
   tl.add("end");
   tl.to("svg",{
    duration: 1,
@@ -49,7 +49,7 @@ function sceneThree(){
   return tl;
 }
 
-var master = gsap.timeline({yoyo:true, repeat:1, repeatDelay: 2});
+var master = gsap.timeline();
 master.add(sceneOne())
       .add(sceneTwo())
       .add(sceneThree());
