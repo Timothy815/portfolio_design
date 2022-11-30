@@ -47,7 +47,8 @@ function sceneThree(){
   return tl;
 }
 
-var master = gsap.timeline();
+var master = gsap.timeline({yoyo:true, repeat:1, repeatDelay: 2});
 master.add(sceneOne())
       .add(sceneTwo())
       .add(sceneThree());
+
